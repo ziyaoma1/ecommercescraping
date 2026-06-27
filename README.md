@@ -118,6 +118,7 @@ The scraper outputs a hierarchical JSON array. Top-level attributes define the p
 * **Compute Overhead:** Playwright is resource-intensive. Running this linearly on a single thread is bottlenecked by DOM rendering times.
 * **IP Blocking:** The current prototype uses a simple exponential backoff. It does not implement proxy rotation or complex fingerprinting, meaning a full-site crawl from a single residential IP would likely be rate-limited eventually.
 * **Alternative products and unit / pack size extraction:** I did not extract alternative products since there were no alternative products on the Product Page. I also chose not to extract Unit Type/ Pack Size as I believe that it is similar to specifications. It could be a good use of LLMs to find alternative products and decide whether something belongs in specifications or unit/pack sizes, but I do not have access to a free source of tokens at the moment, so I refrained from implementing such features.
+* **Product Changes:** Currently there is no feature to check for changes within product pages, like price changes. The only way to check is to rerun everything by deleting the data and running the entire program again.
 
 
 ## Failure Handling
