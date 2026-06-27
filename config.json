@@ -1,0 +1,13 @@
+{
+  "base_url": "https://www.safcodental.com",
+  "category_seeds": [
+    "https://www.safcodental.com/catalog/sutures-surgical-products",
+    "https://www.safcodental.com/catalog/gloves"
+  ],
+  "max_pages": 180,
+  "request_timeout_seconds": 30,
+  "max_retries": 3,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "checkpoint_file": "data/checkpoint.json",
+  "output_dir": "output"
+}
