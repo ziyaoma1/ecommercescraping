@@ -5,9 +5,9 @@ This repository contains a Python-based web scraping prototype. It is designed t
 ## Architecture Overview
 
 This project uses a modular, **agent-based architecture** written in Python. It strictly separates concerns into distinct files to ensure maintainability and testability:
-* `main.py` - The orchestrator that manages the BFS queue and execution loop.
+* `main.py` - Runs everything, by giving config to NavigatorAgent for a starting links.
 * `models.py` - Data structures.
-* `agents.py` - The "thinkers" (Classification, Extraction, Validation, Storage).
+* `agents.py` - The "thinkers" (Navigation, Classification, Extraction, Validation, Storage).
 * `utils.py` - Infrastructure (Playwright browser context and State Checkpointing).
 
 The core crawler operates on a Breadth-First Search (BFS) queue. It initializes from seed category URLs, dynamically executes JavaScript using a stateful browser context, identifies pagination/product links, and funnels raw HTML to an extraction pipeline. 
