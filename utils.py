@@ -32,15 +32,15 @@ class PlaywrightClient:
                 page.goto(url, wait_until="networkidle", timeout=self.cfg['request_timeout_seconds'] * 1000)
                 if is_category:
                     try:
-                        page.wait_for_selector('.ais-Hits-item', timeout=5000)
-                        page.wait_for_selector('.ais-Pagination-list', timeout=2000)
+                        page.wait_for_selector('.ais-Hits-item', timeout=30000)
+                        page.wait_for_selector('.ais-Pagination-list', timeout=30000)
                         page.wait_for_timeout(500)
                     except Exception:
                         pass
                 else:
                     try:
-                        page.wait_for_selector('.product-item-sku, section#product-grouped-info', timeout=8000)
-                        page.wait_for_timeout(1000)
+                        page.wait_for_selector('.product-item-sku, section#product-grouped-info', timeout=30000)
+                        page.wait_for_timeout(30000)
                     except Exception:
                         pass
                 html = page.content()
