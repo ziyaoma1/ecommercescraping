@@ -40,7 +40,7 @@ class PlaywrightClient:
                 else:
                     try:
                         page.wait_for_selector('.product-item-sku, section#product-grouped-info', timeout=30000)
-                        page.wait_for_timeout(30000)
+                        page.wait_for_timeout(1000)
                     except Exception:
                         pass
                 html = page.content()
